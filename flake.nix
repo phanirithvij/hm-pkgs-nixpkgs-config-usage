@@ -31,7 +31,8 @@
         # inherit pkgs;
         modules = [
           home-manager.nixosModules.home-manager
-          { nixpkgs.config.allowUnfree = true; }
+          # { nixpkgs.pkgs = pkgs; }
+          { nixpkgs.config = config; }
           {
             home-manager.useGlobalPkgs = true;
             home-manager.users.test =
